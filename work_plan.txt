@@ -1,0 +1,18 @@
+Anusha, Lauren, Josh
+
+By the End of the Day Wednesday 10/10:
+Write and Test Input Conditioning - 1 hour write + 1 hour test
+Write and Test Shift Register - 1 hour write + 1 hour test 
+Integrate and Test Input Conditioning + Shift Register - 1 hour write + 1 hour test
+By the End of the Day Thursday 10/11: 
+Load system onto device and test - 2 hours working  + 1 hour waiting for synthesize
+Create deliverables (video, etc.) - 1 hour
+
+By the End of the Day Sunday 10/14:
+Draw + Validate SPI/Finite State Machine Model - 5 hours
+By the End of the Day Wednesday 10/17:
+Implement + Test - 3 hours
+FPGA Testing - 2 hours 
+Explore external testing - 1.5 hours
+By the End of the Day Thursday 10/18: 
+Report + Documentation - 2 hours 
