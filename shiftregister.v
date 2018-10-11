@@ -24,8 +24,6 @@ output              serialDataOut       // Positive edge synchronized
 
     always @(posedge peripheralClkEdge) begin
         // Your Code Here
-        if(parallelLoad == 0) // If trying to load, loading 'wins' over shift
-        begin
           shiftregistermem[0] <= serialDataIn;
           shiftregistermem[1] <= shiftregistermem[0];
           shiftregistermem[2] <= shiftregistermem[1];
@@ -37,8 +35,8 @@ output              serialDataOut       // Positive edge synchronized
           serialDataOut <= shiftregistermem[7];
 
           parallelDataOut[width-1:0] <= shiftregistermem[width-1:0];
-        end
-        else
+
+        if(parallelLoad == 1) // If trying to load, loading 'wins' over shift
         begin
           shiftregistermem[width-1:0] <= parallelDataIn[width-1:0];
         end
