@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct 11 18:55:26 2018
-# Process ID: 5692
+# Start of session at: Thu Oct 11 19:55:19 2018
+# Process ID: 10303
 # Current directory: /home/comparch/Lab/Lab2/Midpoint/Midpoint.runs/synth_1
 # Command line: vivado -log midpoint_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source midpoint_wrapper.tcl
 # Log file: /home/comparch/Lab/Lab2/Midpoint/Midpoint.runs/synth_1/midpoint_wrapper.vds
@@ -15,54 +15,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5698 
+INFO: Helper process launched with PID 10310 
 WARNING: [Synth 8-2490] overwriting previous definition of module inputconditioner [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:8]
 WARNING: [Synth 8-2490] overwriting previous definition of module shiftregister [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:9]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1257.719 ; gain = 72.273 ; free physical = 107 ; free virtual = 2317
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1257.723 ; gain = 72.273 ; free physical = 382 ; free virtual = 1439
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'midpoint_wrapper' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:96]
-INFO: [Synth 8-6157] synthesizing module 'jkff1' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'jkff1' (1#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:53]
-INFO: [Synth 8-6157] synthesizing module 'mux2' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:74]
-	Parameter W bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2' (2#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:74]
 INFO: [Synth 8-6157] synthesizing module 'midpoint' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/midpoint.v:4]
 	Parameter width bound to: 8 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'inputconditioner' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:8]
 	Parameter counterwidth bound to: 3 - type: integer 
 	Parameter waittime bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'inputconditioner' (3#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'inputconditioner' (1#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:8]
 INFO: [Synth 8-6157] synthesizing module 'shiftregister' [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:9]
 	Parameter width bound to: 8 - type: integer 
-WARNING: [Synth 8-3848] Net parallelDataOut in module/entity shiftregister does not have driver. [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:17]
-WARNING: [Synth 8-3848] Net serialDataOut in module/entity shiftregister does not have driver. [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'shiftregister' (4#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'midpoint' (5#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/midpoint.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'midpoint_wrapper' (6#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:96]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[7]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[6]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[5]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[4]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[3]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[2]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[1]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataOut[0]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port serialDataOut
+WARNING: [Synth 8-567] referenced signal 'serialDataIn' should be on the sensitivity list [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:23]
+WARNING: [Synth 8-567] referenced signal 'shiftregistermem' should be on the sensitivity list [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:23]
+WARNING: [Synth 8-567] referenced signal 'parallelDataIn' should be on the sensitivity list [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'shiftregister' (2#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/shiftregister.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'midpoint' (3#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/midpoint.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'midpoint_wrapper' (4#1) [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/new/midpoint_wrapper.v:96]
 WARNING: [Synth 8-3331] design shiftregister has unconnected port clk
 WARNING: [Synth 8-3331] design shiftregister has unconnected port peripheralClkEdge
 WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelLoad
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[7]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[6]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[5]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[4]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[3]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[2]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[1]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port parallelDataIn[0]
-WARNING: [Synth 8-3331] design shiftregister has unconnected port serialDataIn
+WARNING: [Synth 8-3331] design midpoint_wrapper has unconnected port btn[2]
+WARNING: [Synth 8-3331] design midpoint_wrapper has unconnected port btn[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.969 ; gain = 100.523 ; free physical = 151 ; free virtual = 2337
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.973 ; gain = 100.523 ; free physical = 401 ; free virtual = 1459
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -75,10 +55,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.969 ; gain = 100.523 ; free physical = 150 ; free virtual = 2337
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.973 ; gain = 100.523 ; free physical = 400 ; free virtual = 1458
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.969 ; gain = 100.523 ; free physical = 150 ; free virtual = 2337
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.973 ; gain = 100.523 ; free physical = 400 ; free virtual = 1458
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -94,26 +74,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1606.570 ; gain = 0.000 ; free physical = 108 ; free virtual = 2100
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.574 ; gain = 0.000 ; free physical = 157 ; free virtual = 1215
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 177 ; free virtual = 2168
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:49 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 225 ; free virtual = 1283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 177 ; free virtual = 2168
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:49 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 225 ; free virtual = 1283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 179 ; free virtual = 2170
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:49 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 227 ; free virtual = 1285
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "conditioned" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 170 ; free virtual = 2161
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 219 ; free virtual = 1277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -129,9 +109,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 3     
 +---Registers : 
 	                3 Bit    Registers := 3     
-	                1 Bit    Registers := 19    
+	                1 Bit    Registers := 18    
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -141,14 +120,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module jkff1 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-Module mux2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
 Module inputconditioner 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -181,7 +152,8 @@ WARNING: [Synth 8-6014] Unused sequential element shift/conditionerSw0/positivee
 WARNING: [Synth 8-6014] Unused sequential element shift/conditionerSw0/negativeedge_reg was removed.  [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:44]
 WARNING: [Synth 8-6014] Unused sequential element shift/conditionerSw1/positiveedge_reg was removed.  [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:43]
 WARNING: [Synth 8-6014] Unused sequential element shift/conditionerSw1/negativeedge_reg was removed.  [/home/comparch/Lab/Lab2/Midpoint/Midpoint.srcs/sources_1/imports/Lab2/inputconditioner.v:44]
-WARNING: [Synth 8-3332] Sequential element (src_sel/q_reg) is unused and will be removed from module midpoint_wrapper.
+WARNING: [Synth 8-3331] design midpoint_wrapper has unconnected port btn[2]
+WARNING: [Synth 8-3331] design midpoint_wrapper has unconnected port btn[1]
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/synchronizer0_reg) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/synchronizer1_reg) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/conditioned_reg) is unused and will be removed from module midpoint_wrapper.
@@ -189,12 +161,6 @@ WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/counter_reg[2]
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/counter_reg[1]) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/counter_reg[0]) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerBttn/sig_delay_reg) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/synchronizer0_reg) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/synchronizer1_reg) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/conditioned_reg) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/counter_reg[2]) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/counter_reg[1]) is unused and will be removed from module midpoint_wrapper.
-WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/counter_reg[0]) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/sig_delay_reg) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/synchronizer0_reg) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/synchronizer1_reg) is unused and will be removed from module midpoint_wrapper.
@@ -203,8 +169,9 @@ WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/counter_reg[2])
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/counter_reg[1]) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/counter_reg[0]) is unused and will be removed from module midpoint_wrapper.
 WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw1/sig_delay_reg) is unused and will be removed from module midpoint_wrapper.
+WARNING: [Synth 8-3332] Sequential element (shift/conditionerSw0/counter_reg[2]) is unused and will be removed from module midpoint_wrapper.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 168 ; free virtual = 2161
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:50 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 207 ; free virtual = 1267
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -216,13 +183,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:08 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 119 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:08 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 119 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,7 +201,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:01:08 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1150
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -258,7 +225,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -271,7 +238,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -283,25 +250,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -317,33 +284,42 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |OBUF |     4|
+|1     |BUFG |     1|
+|2     |LUT3 |     1|
+|3     |LUT4 |     2|
+|4     |FDRE |     5|
+|5     |IBUF |     2|
+|6     |OBUF |     8|
 +------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     4|
-+------+---------+-------+------+
++------+-------------------+-----------------+------+
+|      |Instance           |Module           |Cells |
++------+-------------------+-----------------+------+
+|1     |top                |                 |    19|
+|2     |  shift            |midpoint         |     8|
+|3     |    conditionerSw0 |inputconditioner |     8|
++------+-------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.570 ; gain = 421.125 ; free physical = 104 ; free virtual = 2035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.574 ; gain = 415.125 ; free physical = 118 ; free virtual = 1151
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1606.570 ; gain = 100.523 ; free physical = 161 ; free virtual = 2092
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1606.578 ; gain = 421.125 ; free physical = 161 ; free virtual = 2092
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1600.574 ; gain = 100.523 ; free physical = 176 ; free virtual = 1209
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:15 . Memory (MB): peak = 1600.582 ; gain = 415.125 ; free physical = 176 ; free virtual = 1209
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:12 . Memory (MB): peak = 1606.578 ; gain = 421.234 ; free physical = 154 ; free virtual = 2086
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:17 . Memory (MB): peak = 1603.574 ; gain = 418.227 ; free physical = 170 ; free virtual = 1203
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/comparch/Lab/Lab2/Midpoint/Midpoint.runs/synth_1/midpoint_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file midpoint_wrapper_utilization_synth.rpt -pb midpoint_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1606.578 ; gain = 0.000 ; free physical = 154 ; free virtual = 2087
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 11 18:56:47 2018...
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1627.586 ; gain = 0.000 ; free physical = 170 ; free virtual = 1203
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 11 19:56:47 2018...

@@ -98,25 +98,25 @@ module midpoint_wrapper
     input        clk,
     input  [1:0] sw,
     input  [2:0] btn,
-    output [3:0] led
+    output [7:0] led
 );
 
-    wire[7:0] res;       // Stored inputs to adder
-    wire[3:0] res0, res1;     // Output display options
-    wire res_sel;             // Select between display options
+//    wire[7:0] res;       // Stored inputs to adder
+//    wire[3:0] res0, res1;     // Output display options
+//    wire res_sel;             // Select between display options
     
     // Memory for stored operands (parametric width set to 4 bits)
 //    dff #(4) opA_mem(.trigger(clk), .enable(1'b1), .d(sw), .q(opA));
 //    dff #(4) opB_mem(.trigger(clk), .enable(1'b1), .d(sw), .q(opB));
         
     // Capture button input to switch which MUX input to LEDs
-    jkff1 src_sel(.trigger(clk), .j(btn[1]), .k(btn[2]), .q(res_sel));
-    mux2 #(4) output_select(.in0(res0), .in1(res1), .sel(res_sel), .out(led));
+//    jkff1 src_sel(.trigger(clk), .j(btn[1]), .k(btn[2]), .q(res_sel));
+//    mux2 #(4) output_select(.in0(res0), .in1(res1), .sel(res_sel), .out(led));
         
     // Button zero is the paralell load signal
-    midpoint #(8) shift(.clk(clk), .btn(btn[0]), .switch(sw), .parallelDataIn(8'hA5), .led(res));
+    midpoint #(8) shift(.clk(clk), .btn(btn[0]), .switch(sw), .parallelDataIn(8'hA5), .led(led));
     
-    assign res0 = res[3:0];
-    assign res1 = res[7:4];
+//    assign res0 = res[3:0];
+//    assign res1 = res[7:4];
 endmodule
 
