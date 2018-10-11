@@ -35,16 +35,6 @@ output reg  negativeedge    // 1 clk pulse at falling edge of conditioned
         end
         synchronizer0 <= noisysignal;
         synchronizer1 <= synchronizer0;
-
-        // Toggle posedge and negedge for one clk cycle
-        // if(conditioned) begin
-        //   positiveedge <= 1;
-        //   #20
-        //   positiveedge <= 0;
-        // end
-        // if(!conditioned) begin
-        //   negativeedge <= 1;
-        // end
     end
 
     reg sig_delay;
