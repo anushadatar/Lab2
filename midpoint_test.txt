@@ -1,11 +1,11 @@
 First, load the bitstream onto the FPGA.
 
 Start by testing Serial In, Parallel Out:
-Then, set Switch 0 to high to enable the clock.
+Set Switch 0 to high to enable the clock.
 Then, bring Switch 1 to high to toggle the shift register for the serial input - toggle it once for each bit and watch the bits load in LSB.
-Then, to parallel read, press button 0 to ensure that all of the bits light up based on the intended value (in our sample code, this 0xA5)
+Then, to parallel read, press button 0 to ensure that all of the bits light up based on the intended value (in our sample code, this 0xA5).
 To confirm that this operation is clock-independent, try switching the clock pin to low and confirming the behavior holds.
 
 Then, test Parallel In:
-Press Button 0 to toggle the parallel read feature and ensure that this overrides the serail input as we intended.
-To confirm that this operation is clock-independent, try switching the clock  pin to low and confirming the behavior holds.
+Press Button 0 to toggle the parallel read feature and ensure that this overrides the serial input as we intended.
+To confirm that this operation is clock-independent, try switching the clock pin to low and confirming the behavior holds.
