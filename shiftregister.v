@@ -20,7 +20,7 @@ output reg          serialDataOut       // Positive edge synchronized
 
     reg [width-1:0]      shiftregistermem;
 
-    always @(peripheralClkEdge) begin
+    always @(posedge peripheralClkEdge) begin
         // Your Code Here
           shiftregistermem[0] <= serialDataIn;
           shiftregistermem[1] <= shiftregistermem[0];
@@ -36,11 +36,11 @@ output reg          serialDataOut       // Positive edge synchronized
 
 //        if(parallelLoad == 1) // If trying to load, loading 'wins' over shift
 //        begin
-          
+
 //        end
     end
-    
-    always @(parallelLoad) begin
+
+    always @(posedge parallelLoad) begin
         shiftregistermem[width-1:0] <= parallelDataIn[width-1:0];
     end
 
