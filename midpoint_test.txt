@@ -9,3 +9,5 @@ To confirm that this operation is clock-independent, try switching the clock pin
 Then, test Parallel In:
 Press Button 0 to toggle the parallel read feature and ensure that this overrides the serial input as we intended.
 To confirm that this operation is clock-independent, try switching the clock pin to low and confirming the behavior holds.
+
+Video Demonstration: https://youtu.be/P8Xp0ug_Dks
