@@ -43,7 +43,7 @@ module testshiftregister();
       parallelDataIn = 8'hAA;
 
       // Parallel In, Serial Out
-      #100
+      #95
       parallelLoad = 1;
       
       // Serial In, Parallel Out
