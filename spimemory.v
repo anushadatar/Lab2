@@ -24,11 +24,13 @@ module spiMemory
 
   fsm fsm(.clk(clk), .sclk_pin(sclk_r), .cs_pin(cs_c), .r_or_w(writeEn), .addr_wr(addr_wr), .s_r(s_r), .dm_wr(dm_wr), .miso_en(miso_en));
 
+  addresslatch addresslatch(.clk(clk), .ce(addr_wr), .d(Din), .q(address));
+
   inputconditioner mosi_input(.clk(clk), .noisysignal(mosi_pin), .conditioned(mosi_c), .positiveedge(), .negativeedge());
   inputconditioner sclk_input(.clk(clk), .noisysignal(sclk_pin), .conditioned(), .positiveedge(sclk_r), .negativeedge(sclk_f));
   inputconditioner cs_input(.clk(clk), .noisysignal(cs_pin), .conditioned(cs_c), .positiveedge(), .negativeedge());
 
-  datamemory memory(.clk(clk), .dataOut(Dout), .address(), .writeEnable(dm_wr), .dataIn(Din));
+  datamemory memory(.clk(clk), .dataOut(Dout), .address(address), .writeEnable(dm_wr), .dataIn(Din));
 
   shiftregister #(8) shift(.clk(clk),
                          .peripheralClkEdge(sclk_pin),
