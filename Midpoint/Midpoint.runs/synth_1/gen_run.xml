@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1539302117">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1539315434">
   <File Type="VDS-TIMING-PB" Name="midpoint_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="midpoint_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="midpoint_wrapper.dcp"/>
@@ -23,7 +23,7 @@
     <File Path="$PSRCDIR/sources_1/imports/Lab2/shiftregister.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../shiftregister.v"/>
-        <Attr Name="ImportTime" Val="1539299753"/>
+        <Attr Name="ImportTime" Val="1539315317"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -32,7 +32,7 @@
     <File Path="$PSRCDIR/sources_1/imports/Lab2/midpoint.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../midpoint.v"/>
-        <Attr Name="ImportTime" Val="1539299585"/>
+        <Attr Name="ImportTime" Val="1539311443"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
