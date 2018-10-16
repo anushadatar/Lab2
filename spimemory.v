@@ -18,7 +18,7 @@ module spiMemory
 );
   wire mosi_c, sclk_r, sclk_f, cs_c;
   wire addr_wr, s_r, dm_wr, miso_en;
-  wire writeEn;
+  wire writeEn, serialDataOut;
   wire[7:0] Din, Dout;
   wire[6:0] address;
 
@@ -34,10 +34,12 @@ module spiMemory
 
   shiftregister #(8) shift(.clk(clk),
                          .peripheralClkEdge(sclk_pin),
-                         .parallelLoad(parallelLoad),
+                         .parallelLoad(s_r),
                          .parallelDataIn(Dout),
-                         .serialDataIn(serialDataIn),
+                         .serialDataIn(mosi_c),
                          .parallelDataOut(Din),
                          .serialDataOut(serialDataOut));
+
+  assign miso_pin = (miso_en) ? serialDataOut : 1'bz;
 
 endmodule
