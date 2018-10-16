@@ -33,7 +33,7 @@ module spiMemory
   datamemory memory(.clk(clk), .dataOut(Dout), .address(address), .writeEnable(dm_wr), .dataIn(Din));
 
   shiftregister #(8) shift(.clk(clk),
-                         .peripheralClkEdge(sclk_pin),
+                         .peripheralClkEdge(sclk_r),
                          .parallelLoad(s_r),
                          .parallelDataIn(Dout),
                          .serialDataIn(mosi_c),
