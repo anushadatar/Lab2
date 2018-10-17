@@ -24,9 +24,9 @@ module spiMemoryTest();
 
       // Give the 6 address from MSB to LSB
       for (i=0; i<7; i=i+1) begin
-          mosi_pin = WRITE_ADDRESS[6-i]; #100
+          mosi_pin = WRITE_ADDRESS[6-i]; #200
           sclk=1;#200
-          sclk = 0;
+          sclk=0;
       end
       mosi_pin = 0; #100 // Specify the operation to be write
       sclk=1;#200
@@ -39,7 +39,7 @@ module spiMemoryTest();
 
       // Transmit the data to be written from MSB to LSB
       for (i=0; i<8; i=i+1) begin
-          mosi_pin = DATA[7-i]; #100
+          mosi_pin = DATA[7-i]; #200
           sclk=1; #200
           sclk = 0;
       end
@@ -52,24 +52,21 @@ module spiMemoryTest();
 
       // Give the 6 address from MSB to LSB
       for (i=0; i<7; i=i+1) begin
-          #100
+          mosi_pin = READ_ADDRESS[6-i];#200
+          sclk=1;#200
           sclk=0;
-          mosi_pin = READ_ADDRESS[6-i];
-          #100
-          sclk=1;
       end
       mosi_pin = 0; #100 // Specify the operation to be write
       sclk=1;#200
       sclk = 0;
       // Transmit the data to be written from MSB to LSB
       for (i=0; i < 8; i=i+1) begin
-          #100
+          mosi_pin = DATA[0]; #200
+          // if (miso_pin != DATA[7-i]) begin #100
+          //    $display("Test failed at bit i");
+          // end
+          sclk=1;#200
           sclk=0;
-          if (miso_pin != DATA[7-i]) begin
-             $display("Test failed at bit i");
-          end
-          #100
-          sclk=1;
       end
       $finish;
   end

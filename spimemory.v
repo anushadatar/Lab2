@@ -22,7 +22,7 @@ module spiMemory
   wire[7:0] Din, Dout;
   wire[6:0] address;
 
-  fsm fsm(.clk(clk), .sclk_pin(sclk_r), .cs_pin(cs_c), .r_or_w(writeEn), .addr_wr(addr_wr), .s_r(s_r), .dm_wr(dm_wr), .miso_en(miso_en));
+  fsm fsm(.clk(clk), .sclk_pin(sclk_r), .cs_pin(cs_c), .r_or_w(mosi_c), .addr_wr(addr_wr), .s_r(s_r), .dm_wr(dm_wr), .miso_en(miso_en));
 
   addresslatch addresslatch(.clk(clk), .ce(addr_wr), .d(Din), .q(address));
 

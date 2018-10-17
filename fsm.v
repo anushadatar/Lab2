@@ -19,15 +19,18 @@ module fsm(
       end
       4'd7: begin
         addr_wr <= 1'b0;
-        if(r_or_w) begin
+        if(!r_or_w) begin
           s_r <= 1'b1; dm_wr <= 1'b0; miso_en <= 1'b1;
         end
         else begin
           s_r <= 1'b0; dm_wr <= 1'b1; miso_en <= 1'b0;
         end
       end
+      4'd8: begin
+        s_r <= 1'b0;
+      end
       4'd15: begin
-        addr_wr <= 1'b0; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= 1'b1;
+        addr_wr <= 1'b0; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= miso_en;
       end
       default: begin
         addr_wr <= addr_wr; s_r <= s_r; dm_wr <= dm_wr; miso_en <= miso_en;
