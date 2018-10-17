@@ -1,6 +1,7 @@
 //------------------------------------------------------------------------
 // SPI Memory
 //------------------------------------------------------------------------
+`include "dff.v"
 `include "fsm.v"
 `include "shiftregister.v"
 `include "inputconditioner.v"
@@ -18,7 +19,7 @@ module spiMemory
 );
   wire mosi_c, sclk_r, sclk_f, cs_c;
   wire addr_wr, s_r, dm_wr, miso_en;
-  wire writeEn, serialDataOut;
+  wire writeEn, serialDataOut, dataOut;
   wire[7:0] Din, Dout;
   wire[6:0] address;
 
@@ -40,6 +41,8 @@ module spiMemory
                          .parallelDataOut(Din),
                          .serialDataOut(serialDataOut));
 
-  assign miso_pin = (miso_en) ? serialDataOut : 1'bz;
+  dff dff(.serialDataOut(serialDataOut), .clockEnable(sclk_f), .clk(clk), .dataOut(dataOut));
+
+  assign miso_pin = (miso_en) ? dataOut : 1'bz;
 
 endmodule
