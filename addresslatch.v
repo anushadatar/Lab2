@@ -7,7 +7,7 @@ module addresslatch(
 
   always @ (posedge clk) begin
     if(ce)begin
-      q <= d[7:1];
+      q <= d[6:0];
     end
   end
 

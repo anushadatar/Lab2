@@ -60,19 +60,24 @@ module spiMemoryTest();
       mosi_pin = 0;
 
       // Transmit the data to be written from MSB to LSB
-      //for (i=0; i < 8; i=i+1) begin
-          //mosi_pin = DATA[0]; #200
+      for (i=0; i<8; i=i+1) begin
+          #400
+          cs_pin = 0;
+          mosi_pin = DATA[0];
+      // end
+      // for (i=0; i < 8; i=i+1) begin
+      //     mosi_pin = DATA[0]; #200
           // if (miso_pin != DATA[7-i]) begin #100
           //    $display("Test failed at bit i");
           // end
-          //sclk=1;#200
-          //sclk=0;
-          //for (i=0; i<20; i=i+1) begin
-            //sclk = 1; #200
-            //sclk = 0;
-          //end
-      //#2000
-      //end
-      //$finish;
+          // sclk=1;#200
+          // sclk=0;
+          // for (i=0; i<20; i=i+1) begin
+          //   sclk = 1; #200
+          //   sclk = 0;
+          // end
+      // #2000
+      end
+      $finish;
   end
 endmodule
