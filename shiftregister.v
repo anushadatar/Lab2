@@ -34,7 +34,6 @@ output reg          serialDataOut       // Positive edge synchronized
               shiftregistermem[5] <= shiftregistermem[4];
               shiftregistermem[6] <= shiftregistermem[5];
               shiftregistermem[7] <= shiftregistermem[6];
-              serialDataOut <= shiftregistermem[7];
             end
           end
           serialDataOut <= shiftregistermem[7];
