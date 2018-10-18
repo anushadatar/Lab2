@@ -41,8 +41,8 @@ module spiMemory
                          .parallelDataOut(Din),
                          .serialDataOut(serialDataOut));
 
-  dff dff(.serialDataOut(serialDataOut), .clockEnable(sclk_f), .clk(clk), .dataOut(dataOut));
+  // dff dff(.serialDataOut(serialDataOut), .clockEnable(sclk_f), .clk(clk), .dataOut(dataOut));
 
-  assign miso_pin = (miso_en) ? dataOut : 1'bz;
+  assign miso_pin = (miso_en) ? serialDataOut : 1'bz;
 
 endmodule

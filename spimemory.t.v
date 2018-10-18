@@ -45,7 +45,7 @@ module spiMemoryTest();
           mosi_pin = DATA[7-i];
       end
 
-      #100
+      #400
       cs_pin = 1;
       #400
 

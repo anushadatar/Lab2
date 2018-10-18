@@ -28,9 +28,9 @@ module fsm(
               s_r <= 1'b1; dm_wr <= 1'b0; miso_en <= 1'b1;
             end
           end
-          //4'd8: begin
-            //s_r <= 1'b0;
-          //end
+          // 4'd7: begin
+          //   s_r <= 1'b0;
+          // end
           4'd15: begin
             addr_wr <= 1'b0; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= 1'b0;
           end
@@ -39,6 +39,9 @@ module fsm(
           end
         endcase
       end
+    end
+    if(counter==4'd7) begin
+      s_r <= 1'b0;
     end
     if(cs_pin) begin
       counter <= 4'd15;
