@@ -1,6 +1,9 @@
 `include "inputconditioner.v"
 `include "shiftregister.v"
-
+/*
+Integrates shift register and input conditioner to 
+process and consider signal as expected.
+*/
 module midpoint
 #(parameter width = 8)
 (

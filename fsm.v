@@ -1,3 +1,9 @@
+/*
+Finite state machine to handle SPI memory inputs and outputs 
+as specified. Sets bits to read address, checks if bit is read or write,
+and then sets bits to write or read accordingly.
+*/
+
 module fsm(
     input      clk,
     input      sclk_pin,
@@ -16,9 +22,11 @@ module fsm(
       if(sclk_pin)begin
         counter <= counter + 1;
         case(counter)
+          // Read address.
           4'd0: begin
             addr_wr <= 1'b1; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= 1'b0;
           end
+          // Characterize based on state.
           4'd6: begin
             addr_wr <= 1'b0;
             if(!r_or_w) begin
@@ -28,9 +36,7 @@ module fsm(
               s_r <= 1'b1; dm_wr <= 1'b0; miso_en <= 1'b1;
             end
           end
-          // 4'd7: begin
-          //   s_r <= 1'b0;
-          // end
+          // Complete operation accordingly.
           4'd15: begin
             addr_wr <= 1'b0; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= 1'b0;
           end
@@ -39,10 +45,12 @@ module fsm(
           end
         endcase
       end
+      // Set serial read as needed.
       if(counter==4'd7) begin
         if(s_r) s_r <= 0;
       end
     end
+    // Account for chip select.
     if(cs_pin) begin
       counter <= 4'd15;
       addr_wr <= 1'b0; s_r <= 1'b0; dm_wr <= 1'b0; miso_en <= 1'b0;

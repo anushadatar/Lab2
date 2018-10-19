@@ -3,6 +3,17 @@
 //------------------------------------------------------------------------
 `include "inputconditioner.v"
 
+/*
+    Use gtkwave to visualize the signal output -
+
+    Clock Synchronization :
+    The conditioned signal should be synchronized to the clock signal.
+    Debouncing :
+    The conditioned signal should not be disrupted by the included disruption.
+    Edge Detection :
+    The posedge and negedge should be aligned with the conditioned signal's
+    positive and negative edges for a single clock pulse.
+*/
 module testConditioner();
 
     reg clk;
@@ -21,22 +32,9 @@ module testConditioner();
     always #10 clk=!clk;    // 50MHz Clock
 
     initial begin
-    // Your Test Code
+   // Your Test Code
     // Be sure to test each of the three conditioner functions:
     // Synchronization, Debouncing, Edge Detection
-
-    /*
-    Use gtkwave to visualize the signal output -
-
-    Clock Synchronization :
-    The conditioned signal should be synchronized to the clock signal.
-    Debouncing :
-    The conditioned signal should not be disrupted by the included disruption.
-    Edge Detection :
-    The posedge and negedge should be aligned with the conditioned signal's
-    positive and negative edges for a single clock pulse.
-    */
-
       pin = 0;
       $dumpfile("inputconditioner.vcd");
       $dumpvars(0, dut);

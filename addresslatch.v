@@ -1,3 +1,8 @@
+/*
+Address latch module - transmits the address 
+along based on the input clock. 
+*/
+
 module addresslatch(
   input[7:0]       d,
   input            ce,

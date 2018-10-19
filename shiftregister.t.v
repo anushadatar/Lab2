@@ -1,6 +1,17 @@
 //------------------------------------------------------------------------
 // Shift Register test bench
 //------------------------------------------------------------------------
+
+/*
+    This test runs both modes of the shift register : Parallel In, serial Out
+    and Serial In, Parallel Out. Use the run_test script for the shift register
+    to view the waveforms and check that the data has loaded as expected 
+    (shifted bit by bit for serial in with a full output for the corresponding
+    paralleut and a full replacement for parallelin with the MSB reported for
+    serialout). 
+    */
+
+
 `include "shiftregister.v"
 module testshiftregister();
 
@@ -24,15 +35,6 @@ module testshiftregister();
     initial peripheralClkEdge = 0;
     always #30 peripheralClkEdge=!peripheralClkEdge;
     initial parallelLoad = 0;
-
-    /*
-    This test runs both modes of the shift register : Parallel In, serial Out
-    and Serial In, Parallel Out. Use the run_test script for the shift register
-    to view the waveforms and check that the data has loaded as expected 
-    (shifted bit by bit for serial in with a full output for the corresponding
-    paralleut and a full replacement for parallelin with the MSB reported for
-    serialout). 
-    */
 
     initial begin
       $dumpfile("shiftregister.vcd");

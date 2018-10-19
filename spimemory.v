@@ -8,6 +8,11 @@
 `include "datamemory.v"
 `include "addresslatch.v"
 
+/*
+Fully integrated spi memory model based on diagram. Handles reading
+and writing to addresses as specified.
+*/
+
 module spiMemory
 (
     input           clk,        // FPGA clock

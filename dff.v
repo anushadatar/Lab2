@@ -1,4 +1,8 @@
-
+/*
+Flip-flop associated with the MISO pin - changes
+output such that it can then be enabled/disabled by
+the MISO Buffer enable to tri-state the buffer.
+*/
 module dff 
 (
     input serialDataOut,
